@@ -1,0 +1,149 @@
+/* --------------- ELEMENTS --------------- */
+body{
+  background-color: #F5E9E2;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+button {
+  background-color: #815BC3;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2em/2em;
+  margin: 10px;
+  padding: 15px 25px;
+  width: 45%;
+  max-height: 45%;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  background-color: #4B2142;
+}
+
+h1, h3{
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-size: 3.5rem;
+  padding: 25px;
+}
+
+button, p {
+  font-family: 'Arvo', serif;
+}
+
+p {
+  margin: 20px 40px;
+  font-size: 2rem;
+}
+
+h3 {
+  transition: .5s linear;
+  margin: 0 auto;
+  display:none;
+}
+
+/* --------------- CLASSES --------------- */
+.card-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.button-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+  align-content: center;
+}
+
+.card-info-container {
+  position: relative;
+  height: 100%;
+}
+
+.score-up {
+  text-shadow: 0 0 10px #F17105,
+               0 0 20px #F17105,
+               0 0 40px #F17105;
+  color: white;
+}
+
+.score-down {
+  text-shadow: 0 0 10px #4B2142,
+               0 0 20px #4B2142,
+               0 0 40px #4B2142;
+  color: #2F0147;
+}
+
+/* --------------- CARDS --------------- */
+/* The flip card container - set the width and height to whatever you want.
+We have added the border property to demonstrate that the flip itself goes out of
+the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+ background-color: transparent;
+ width: 60vw;
+ height: 75vh;
+ perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ transition: transform 0.5s;
+ transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/*.flip-card:hover .flip-card-inner*/.is-flipped {
+ transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ -webkit-backface-visibility: hidden; /* Safari */
+ backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+ background-color: #2F0147;
+ color: white;
+ border-radius: 30px;
+}
+
+/* Style the back side */
+.flip-card-back {
+ background-color: #F17105;
+ color: black;
+ transform: rotateY(180deg);
+ border-radius: 30px;
+}
+
+/* ---------- IDs ----------- */
+#score-div {
+  position:absolute;
+  align-content: center;
+  display: flex;
+  width: 100%;
+}
+
+#finish-button {
+  display: none;
+}
